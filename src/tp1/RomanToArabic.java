@@ -5,6 +5,9 @@ public class RomanToArabic {
         if(roman == "I"){
             return 1;
         }
+        if(roman == "V"){
+            return 5;
+        }
         return 0;
     }
 }
