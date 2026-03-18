@@ -28,6 +28,14 @@ public class romanToArabicTest {
         int result = rta.romanToArabic("II");
         assertEquals(2, result);
     }
+
+    //test 4: si le paso IV devuelve 4
+    @Test
+    public void testRomanIVToArabic4() {
+        RomanToArabic rta = new RomanToArabic();
+        int result = rta.romanToArabic("IV");
+        assertEquals(4, result);
+    }
 }
 
 
