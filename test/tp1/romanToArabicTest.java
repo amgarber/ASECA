@@ -20,6 +20,14 @@ public class romanToArabicTest {
         int result = rta.romanToArabic("V");
         assertEquals(5, result);
     }
+
+    //test 3: si le paso II devuelve 2
+    @Test
+    public void testRomanIIToArabic2() {
+        RomanToArabic rta = new RomanToArabic();
+        int result = rta.romanToArabic("II");
+        assertEquals(2, result);
+    }
 }
 
 
