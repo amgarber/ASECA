@@ -1,10 +1,11 @@
+package tp1;
+
 import org.junit.Test;
-import tp1.RomanToArabic;
 
 import static org.junit.Assert.assertEquals;
 
 
-public class romanToArabicTest {
+public class RomanToArabicTest {
     //test mas basico: si le paso I me devuelve 1
     @Test
     public void testRomanIToArabic1() {
