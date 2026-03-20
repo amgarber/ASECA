@@ -4,6 +4,8 @@ public class ArabicToRoman {
     public String arabicToRoman(int arabic){
         if (arabic == 1 ){
             return "I";
+        } else if(arabic == 2){
+            return "II";
         }
         return "";
     }

@@ -12,4 +12,11 @@ public class ArabicToRomanTest {
         String result = rta.arabicToRoman(1);
         assertEquals("I", result);
     }
+
+    @Test
+    public void testArabicToRoman2(){
+        ArabicToRoman rta = new ArabicToRoman();
+        String result = rta.arabicToRoman(2);
+        assertEquals("II", result);
+    }
 }
