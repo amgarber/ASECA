@@ -13,7 +13,7 @@ public class ArabicToRoman {
     }
 
 
-    private String arabicValueOf(char arabicChar){
+    private String arabicValueOf(int arabicChar){
         if (arabicChar == 1) return "I";
         if (arabicChar == 5) return "V";
         if (arabicChar == 10) return "X";
