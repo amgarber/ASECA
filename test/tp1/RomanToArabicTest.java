@@ -37,6 +37,12 @@ public class RomanToArabicTest {
         int result = rta.romanToArabic("IV");
         assertEquals(4, result);
     }
+    @Test
+    public void testManyRomanToArabic(){
+        RomanToArabic rta = new RomanToArabic();
+        int result = rta.romanToArabic("MMMDCCXXIV");
+        assertEquals(3724, result);
+    }
 }
 
 
