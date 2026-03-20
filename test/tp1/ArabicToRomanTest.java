@@ -19,4 +19,10 @@ public class ArabicToRomanTest {
         String result = rta.arabicToRoman(2);
         assertEquals("II", result);
     }
+    @Test
+    public void testArabicToRoman4(){
+        ArabicToRoman rta = new ArabicToRoman();
+        String result = rta.arabicToRoman(4);
+        assertEquals("IV", result);
+    }
 }

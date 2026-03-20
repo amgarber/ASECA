@@ -6,6 +6,8 @@ public class ArabicToRoman {
             return "I";
         } else if(arabic == 2){
             return "II";
+        } else if (arabic == 4){
+            return "IV";
         }
         return "";
     }
