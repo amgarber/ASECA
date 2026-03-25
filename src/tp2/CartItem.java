@@ -11,4 +11,12 @@ public class CartItem {
 
     public Product getProduct() { return product; }
     public int getQuantity() { return quantity; }
+
+    public void increaseQuantity(int quantity) {
+        this.quantity += quantity;
+    }
+
+    public void decreaseQuantity(int quantity) {
+        this.quantity -= quantity;
+    }
 }

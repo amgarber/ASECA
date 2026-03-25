@@ -18,5 +18,9 @@ public class Cart {
         items.add(new CartItem(product, quantity));
     }
 
+    public void remove(Product product) {
+        items.removeIf(item -> item.getProduct().getId().equals(product.getId()));
+    }
+
 
 }
