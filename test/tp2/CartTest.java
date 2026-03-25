@@ -11,15 +11,19 @@ public class CartTest {
         assertEquals(0, cart.getItems().size());
     }
     @Test
-    public void shouldAddProductToCart() {
+    public void shouldAddDifferentProductsToCart() {
         Cart cart = new Cart();
         Product product = new Product("1", "Coca Cola");
+        Product product2 = new Product("2", "Agua");
 
         cart.add(product, 1);
+        cart.add(product2, 5);
 
-        assertEquals(1, cart.getItems().size());
+        assertEquals(2, cart.getItems().size());
         assertEquals(1, cart.getItems().get(0).getQuantity());
+        assertEquals(5, cart.getItems().get(1).getQuantity());
     }
+
     @Test
     public void shouldRemoveProductFromCart() {
         Cart cart = new Cart();
