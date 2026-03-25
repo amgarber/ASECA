@@ -8,15 +8,16 @@ public class CartTest {
     @Test
     public void shouldCreateEmptyCart(){
         Cart cart = new Cart();
-        assertEquals(0, cart.getProducts().size());
+        assertEquals(0, cart.getItems().size());
     }
     @Test
     public void shouldAddProductToCart() {
         Cart cart = new Cart();
-        Product product = new Product("1", "Coca Cola", 1);
+        Product product = new Product("1", "Coca Cola");
 
-        cart.add(product);
+        cart.add(product, 1);
 
-        assertEquals(1, cart.getProducts().size());
+        assertEquals(1, cart.getItems().size());
+        assertEquals(1, cart.getItems().get(0).getQuantity());
     }
 }
