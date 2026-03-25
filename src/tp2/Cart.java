@@ -15,12 +15,29 @@ public class Cart {
     }
 
     public void add(Product product, int quantity) {
+        for (CartItem item : items) {
+            if (item.getProduct().getId().equals(product.getId())) {
+                item.increaseQuantity(quantity);
+                return;
+            }
+        }
+
         items.add(new CartItem(product, quantity));
     }
 
-    public void remove(Product product) {
-        items.removeIf(item -> item.getProduct().getId().equals(product.getId()));
+    public void remove(Product product, int quantity) {
+        for (CartItem item : items) {
+            if (item.getProduct().getId().equals(product.getId())) {
+                if (item.getQuantity() > quantity) {
+                    item.decreaseQuantity(quantity);
+                } else {
+                    items.remove(item);
+                }
+                return;
+            }
+        }
     }
-
-
 }
+
+
+
