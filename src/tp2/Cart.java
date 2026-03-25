@@ -14,5 +14,8 @@ public class Cart {
         return products;
     }
 
+    public void add(Product product) {
+        this.products.add(product);
+    }
 
 }

@@ -7,13 +7,13 @@ import static org.junit.Assert.assertEquals;
 public class ProductsTest {
     @Test
     public void shouldCreateProductId(){
-        Product product = new Product("1", "Coca Cola");
+        Product product = new Product("1", "Coca Cola", 1);
         assertEquals("1", product.getId());
 
     }
     @Test
     public void shouldCreateProductName() {
-        Product product = new Product("1", "Coca Cola");
+        Product product = new Product("1", "Coca Cola", 1);
         assertEquals("Coca Cola", product.getName());
     }
 
