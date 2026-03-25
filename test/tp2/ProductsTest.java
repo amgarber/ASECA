@@ -17,5 +17,4 @@ public class ProductsTest {
         assertEquals("Coca Cola", product.getName());
     }
 
-
 }

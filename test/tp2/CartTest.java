@@ -20,4 +20,14 @@ public class CartTest {
         assertEquals(1, cart.getItems().size());
         assertEquals(1, cart.getItems().get(0).getQuantity());
     }
+    @Test
+    public void shouldRemoveProductFromCart() {
+        Cart cart = new Cart();
+        Product product = new Product("1", "Coca Cola");
+
+        cart.add(product, 1);
+        cart.remove(product);
+
+        assertEquals(0, cart.getItems().size());
+    }
 }
