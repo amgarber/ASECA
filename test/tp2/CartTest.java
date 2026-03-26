@@ -3,6 +3,7 @@ package tp2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class CartTest {
     @Test
@@ -33,5 +34,14 @@ public class CartTest {
         cart.remove(product, 1);
 
         assertEquals(1, cart.getItems().size());
+    }
+    @Test
+    public void quantityShouldNotBeNegative(){
+        Cart cart = new Cart();
+        Product product = new Product("1", "Coca Cola");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            cart.add(product, -3);
+        });
     }
 }
